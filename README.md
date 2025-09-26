@@ -1,6 +1,4 @@
-Bagus — aku jelaskan **alur lengkap & detail** untuk program absensi (sesuai kontrol keyboard yang kamu minta). Akan aku uraikan setiap tombol, apa yang terjadi di memori/app, apa yang ditulis ke disk, kondisi kesalahan yang mungkin muncul, dan rekomendasi supaya hasilnya reliable.
 
-# Alur lengkap (high-level)
 
 1. Jalankan `main.py` → kamera menyala, preview ditampilkan (mode preview).
 2. Tekan `n` → mulai *data entry* (masukkan `nama` dan `kelas`). Program membuat buffer kosong untuk menyimpan capture sementara.
@@ -206,9 +204,25 @@ Bagus — aku jelaskan **alur lengkap & detail** untuk program absensi (sesuai k
 
 ---
 
-Kalau kamu mau, aku bisa:
 
-* Tuliskan **manajemen file metadata** (contoh `label_map.json` dan `users.csv`) dan **potongan kode** untuk auto-save on exit agar implementasimu persis sesuai alur di atas.
-* Atau aku langsung susun **README.md** yang mendokumentasikan alur ini untuk GitHub (dengan contoh perintah, screenshot/CLI output).
 
-Mau aku lanjut buatkan file metadata dan contoh snippet auto-save on exit sekarang?
+# Face Attendance System (Raspberry Pi + OpenCV)
+
+Sistem absensi sederhana berbasis **Face ID** menggunakan Raspberry Pi & OpenCV.
+
+## 📂 Struktur
+- `data/` → dataset wajah per orang
+- `models/` → file model hasil training
+- `main.py` → aplikasi utama capture & absensi
+- `train_model.py` → training dataset
+- `recognize.py` → test pengenalan wajah
+- `test_camera.py` → cek kamera
+
+## 🚀 Cara Setup
+
+### 1. Install Dependency
+```bash
+sudo apt update
+sudo apt install python3-pip -y
+pip3 install numpy==1.26.4 opencv-contrib-python==4.5.5.64
+
