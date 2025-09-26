@@ -1,0 +1,19 @@
+face_attendance_yolo/
+│
+├── data/               # dataset wajah (foto per orang)
+│   ├── nama1/
+│   │    ├── 1.jpg
+│   │    ├── 2.jpg
+│   └── nama2/
+│        ├── 1.jpg
+│
+├── models/             # folder untuk model YOLO & embedding database
+│   ├── yolov11n.pt
+│   └── embeddings.npy
+│
+├── main.py             # capture dataset wajah
+├── build_embeddings.py # generate embedding database
+├── recognize.py        # jalankan absensi otomatis
+├── test_camera.py      # cek kamera
+├── requirements.txt
+└── README.md
