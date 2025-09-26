@@ -1,0 +1,6 @@
+ultralytics==8.2.77
+deepface==0.0.93
+opencv-python==4.8.1.78
+numpy==1.26.4
+torch
+torchvision
